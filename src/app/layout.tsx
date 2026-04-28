@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import clsx from "clsx";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -28,9 +29,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className={clsx("h-full", "bg-slate-700", "text-gray-300")}>
         <Navbar />
-        <main className="bg-slate-700 h-screen p-16">{children}</main>
+        <main className="  h-screen p-16">{children}</main>
       </body>
     </html>
   );
